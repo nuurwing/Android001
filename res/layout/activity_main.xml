@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dip"
+        android:text="学生管理系统"
+        android:textColor="#99CCFF"
+        android:textSize="23sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="姓名"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/tv_name"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="性别"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/tv_sex"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="年龄"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_name"
+            android:layout_alignRight="@id/tv_name"
+            android:layout_below="@id/tv_name"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_sex"
+            android:layout_alignRight="@id/tv_sex"
+            android:layout_below="@id/tv_sex"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_age"
+            android:layout_alignRight="@id/tv_age"
+            android:layout_below="@id/tv_age"
+            android:inputType="number"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_add_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/et_age"
+            android:layout_toRightOf="@id/et_age"
+            android:text="添加学生"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/ll_student_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="1dip"
+            android:orientation="vertical"
+            android:padding="5dip" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存数据"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_restore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="恢复数据"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
